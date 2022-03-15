@@ -99,7 +99,10 @@ export const BlockchainContextProvider = (props) => {
             console.log("No accounts found");
           }
         } else {
-          alert("Please Select Matic Mainnet!");
+          document.querySelector(".alert-box").classList.add("open-alert");
+          document.querySelector(".text-alert").innerText =
+            "Please Select Matic Mainnet!";
+          window.scrollTo(0, 0);
         }
       }
     } catch (error) {
