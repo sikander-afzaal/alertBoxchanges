@@ -103,6 +103,7 @@ export const BlockchainContextProvider = (props) => {
           document.querySelector(".text-alert").innerText =
             "Please Select Matic Mainnet!";
           window.scrollTo(0, 0);
+          // lol
         }
       }
     } catch (error) {
