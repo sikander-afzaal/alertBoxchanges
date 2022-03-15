@@ -74,7 +74,10 @@ export const BlockchainContextProvider = (props) => {
             "https://metamask.app.link/dapp/www.hamtonpigs.com/ "
           );
         }
-        return alert("Please install Metamask");
+        document.querySelector(".alert-box").classList.add("open-alert");
+        document.querySelector(".text-alert").innerText =
+          "Please install Meta Mask";
+        window.scrollTo(0, 0);
       } else {
         await window.ethereum.enable();
         const accounts = await window.ethereum.request({
