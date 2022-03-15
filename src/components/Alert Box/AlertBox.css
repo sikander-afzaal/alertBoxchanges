@@ -8,10 +8,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
   border: 6px solid rgba(0, 0, 0, 19.2%);
   border-radius: 25px;
-  backdrop-filter: blur(16px);
   width: 596px;
   height: 296px;
   transition: all 0.25s ease-in-out;
@@ -27,6 +26,16 @@
   cursor: pointer;
   right: 4%;
   top: 7%;
+}
+/* if backdrop support: very transparent and blurred */
+@supports (
+  (-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))
+) {
+  .backdrop-blur {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
 }
 .piggy-img {
   object-fit: contain;
