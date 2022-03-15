@@ -1,0 +1,53 @@
+.alert-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 6px solid rgba(0, 0, 0, 19.2%);
+  border-radius: 25px;
+  backdrop-filter: blur(16px);
+  width: 596px;
+  height: 296px;
+  transition: all 0.25s ease-in-out;
+}
+.cross {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 6px;
+  height: 35px;
+  position: absolute;
+  width: 35px;
+  cursor: pointer;
+  right: 4%;
+  top: 7%;
+}
+.piggy-img {
+  object-fit: contain;
+  max-width: 200px;
+}
+.alert-box p {
+  font-size: 1.8rem;
+}
+.open-alert {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+@media screen and (max-width: 594px) {
+  .alert-box {
+    width: 95%;
+    height: 296px;
+  }
+  .piggy-img {
+    max-width: 40%;
+  }
+  .alert-box p {
+    font-size: 1.3rem;
+  }
+}
